@@ -13,6 +13,10 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>eommerce</name>
     <description>Demo project for Spring Boot</description>
+    <modules>
+        <module>register</module>
+        <module>user-service</module>
+    </modules>
     <properties>
         <java.version>1.8</java.version>
         <spring-cloud.version>2020.0.3</spring-cloud.version>
@@ -60,6 +64,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <!-- Nacos -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
     </dependencies>
     <dependencyManagement>
