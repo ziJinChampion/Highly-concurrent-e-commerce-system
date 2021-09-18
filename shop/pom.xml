@@ -9,14 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.finalWork</groupId>
-    <artifactId>eommerce</artifactId>
+    <artifactId>shop</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>eommerce</name>
-    <description>Demo project for Spring Boot</description>
-    <modules>
-        <module>register</module>
-        <module>user-service</module>
-    </modules>
+    <name>shop</name>
+    <description>shop</description>
     <properties>
         <java.version>1.8</java.version>
         <spring-cloud.version>2020.0.3</spring-cloud.version>
@@ -24,11 +20,15 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jdbc</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
@@ -58,18 +58,8 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-        </dependency>
-
-        <!-- Nacos -->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
     </dependencies>
     <dependencyManagement>
