@@ -17,6 +17,7 @@
         <module>order-service</module>
         <module>stock-service</module>
         <module>user-service</module>
+        <module>common</module>
     </modules>
     <description>shop</description>
 
