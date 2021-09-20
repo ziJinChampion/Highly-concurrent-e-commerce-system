@@ -2,15 +2,18 @@ package com.finalwork.userservice.controller;
 
 import com.finalwork.common.bussiness.dto.user.LoginDTO;
 import com.finalwork.userservice.service.UserService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.types.RedisClientInfo;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@Api(tags = "userCenter")
 @RequestMapping("/user")
 public class UserController {
 
@@ -19,6 +22,7 @@ public class UserController {
 
     @Autowired
     DiscoveryClient discoveryClient;
+
 
     @PostMapping("/login")
     public String login(@RequestBody LoginDTO loginDTO){

@@ -4,7 +4,6 @@ server:
 spring:
   application:
     name: user-service
-
   cloud:
     nacos:
       discovery:
@@ -12,7 +11,6 @@ spring:
         cluster-name: FZ
         metadata:
           version: v1
-
     sentinel:
       transport:
         dashboard: 127.0.0.1:8858
@@ -25,6 +23,8 @@ spring:
   redis:
     host: 127.0.0.1
     port: 6379
+    password:
+    timeout: 1000
 
 management:
   endpoints:
