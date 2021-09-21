@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <name>shop</name>
     <modules>
+        <module>gateway</module>
         <module>credit-service</module>
         <module>order-service</module>
         <module>stock-service</module>

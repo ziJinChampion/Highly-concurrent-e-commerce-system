@@ -12,11 +12,13 @@
         <module name="order-service" />
         <module name="common" />
         <module name="credit-service" />
+        <module name="gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="common" target="1.8" />
       <module name="credit-service" target="1.8" />
+      <module name="gateway" target="1.8" />
       <module name="order-service" target="1.8" />
       <module name="shop" target="1.8" />
       <module name="stock-service" target="1.8" />
@@ -27,6 +29,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="common" options="-parameters" />
       <module name="credit-service" options="-parameters" />
+      <module name="gateway" options="-parameters" />
       <module name="order-service" options="-parameters" />
       <module name="shop" options="-parameters" />
       <module name="stock-service" options="-parameters" />
