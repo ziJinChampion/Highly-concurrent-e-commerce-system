@@ -1,5 +1,0 @@
-server:
-  port: 8872
-spring:
-  application:
-    name: user-service

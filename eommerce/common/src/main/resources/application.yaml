@@ -1,5 +1,0 @@
-server:
-  port: 8870
-spring:
-  application:
-    name: common
