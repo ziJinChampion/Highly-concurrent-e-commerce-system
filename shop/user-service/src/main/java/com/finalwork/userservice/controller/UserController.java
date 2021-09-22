@@ -1,16 +1,14 @@
 package com.finalwork.userservice.controller;
 
 import com.finalwork.common.bussiness.dto.user.LoginDTO;
+import com.finalwork.common.utils.result.CommonResult;
 import com.finalwork.userservice.service.UserService;
+import com.netflix.client.http.HttpRequest;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.types.RedisClientInfo;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
+import static com.finalwork.common.utils.result.CommonResult.success;
 
 @RestController
 @Api(tags = "userCenter")
@@ -20,21 +18,15 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @Autowired
-    DiscoveryClient discoveryClient;
-
-
     @PostMapping("/login")
-    public String login(@RequestBody LoginDTO loginDTO){
+    public CommonResult<String> login(@RequestBody @Validated LoginDTO loginDTO){
         if (userService.checkLogin(loginDTO)){
-            return "success";
+            return success("success");
         }
-        return "failed";
+        return success("username or password error!");
     }
 
-    @GetMapping("/server-list")
-    public List<ServiceInstance> getServerList(){
-        List<ServiceInstance> list = discoveryClient.getInstances("user-service");
-        return list;
-    }
+
+
+
 }
