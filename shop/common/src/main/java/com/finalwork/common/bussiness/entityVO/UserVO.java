@@ -1,28 +1,27 @@
-package com.finalwork.common.bussiness.entityDO;
+package com.finalwork.common.bussiness.entityVO;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
 @Data
-@TableName("user")
 @Accessors(chain = true)
-public class UserDO {
-    @TableId(value = "id", type = IdType.AUTO)
+@ApiModel("userVO")
+public class UserVO {
+    @ApiModelProperty(value = "userId")
     private Integer id;
-    @TableField("name")
+    @ApiModelProperty(value = "userName")
     private String name;
-    @TableField("password")
+    @ApiModelProperty(value = "userPassword")
     private String password;
-    @TableField("photo")
+    @ApiModelProperty(value = "userPhoto")
     private String photo;
-    @TableField("mobile")
+    @ApiModelProperty(value = "userMobile")
     private String mobile;
-    @TableField("remark")
+    @ApiModelProperty(value = "userRemark")
     private String remark;
-
 }

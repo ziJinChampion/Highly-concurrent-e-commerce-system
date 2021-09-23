@@ -3,8 +3,8 @@ package com.finalwork.common.utils.error;
 
 
 public enum GlobalErrorCode {
-    INNER_ERROR(500,"inner error");
-
+    INNER_ERROR(500,"inner error"),
+    STOCK_NOT_ENOUGH(511,"stock is not enough");
 
 
     private Integer code ;

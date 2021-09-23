@@ -29,5 +29,9 @@ public class CommonResult<T> {
     public static <T> CommonResult<T> failed (Integer code, String message, T data){
         return new CommonResult<>(code,message,data);
     }
+    public static <T> CommonResult<T> failed (Integer code, String message){
+        return new CommonResult<>(code,message);
+    }
+
 
 }
