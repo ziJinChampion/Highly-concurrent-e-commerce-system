@@ -27,6 +27,6 @@ public class OrderController {
         }catch (Exception e){
             e.printStackTrace();
         }
-        return failed(GlobalErrorCode.STOCK_NOT_ENOUGH.getCode(),GlobalErrorCode.STOCK_NOT_ENOUGH.getMessage() );
+        return success(GlobalErrorCode.STOCK_NOT_ENOUGH.getMessage());
     }
 }

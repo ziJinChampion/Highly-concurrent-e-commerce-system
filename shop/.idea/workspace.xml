@@ -5,31 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e9605db-2bbd-43b6-aa35-773425621cf2" name="Changes" comment="d some utils">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/bussiness/dto/stock/StockReduceDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/bussiness/entity/order/OrderItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/bussiness/entity/stock/Stock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/bussiness/entityDO/order/OrderDO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/bussiness/entityVO/UserVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/exception/StockException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/orderservice/convert/OrderConvert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/orderservice/dao/OrderItemMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/orderservice/dao/OrderMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/orderservice/feign/StockService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/orderservice/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/resources/mapper/OrderMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/userservice/convert/UserConvert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/bussiness/entity/product/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/bussiness/entityDO/stock/StockDO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/utils/result/PageResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-service/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock-service/src/main/java/com/finalwork/stockservice/controller/StockController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock-service/src/main/java/com/finalwork/stockservice/dao/StockMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock-service/src/main/java/com/finalwork/stockservice/service/StockService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/bussiness/dto/order/OrderCreateDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/bussiness/dto/order/OrderCreateDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/bussiness/entity/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/bussiness/entity/order/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/bussiness/entityDO/UserDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/bussiness/entityDO/UserDO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/bussiness/entityDO/UserDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/bussiness/entityDO/user/UserDO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/utils/error/GlobalErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/utils/error/GlobalErrorCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/utils/result/CommonResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/utils/result/CommonResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/orderservice/OrderServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/orderservice/OrderServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/orderservice/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/orderservice/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/userservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/userservice/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/userservice/feign/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/userservice/feign/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/stock-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock-service/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/userservice/convert/UserConvert.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/userservice/convert/UserConvert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/userservice/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/userservice/dao/UserMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/userservice/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/userservice/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,6 +100,13 @@
       <command value="mvn clean install" />
     </option>
   </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
   <component name="RunManager" selected="Spring Boot.UserServiceApplication">
     <configuration name="tool" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.finalwork.userservice.tools.tool" />
@@ -129,6 +135,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FileServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="file-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.finalwork.fileservice.FileServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.finalwork.gateway.GatewayApplication" />
@@ -139,6 +152,13 @@
     <configuration name="OrderServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="order-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.finalwork.orderservice.OrderServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="product-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.finalwork.productservice.ProductServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -187,7 +207,8 @@
       <workItem from="1632140399515" duration="10562000" />
       <workItem from="1632209277662" duration="7308000" />
       <workItem from="1632277590724" duration="4561000" />
-      <workItem from="1632390433077" duration="7889000" />
+      <workItem from="1632390433077" duration="7954000" />
+      <workItem from="1632452990007" duration="2842000" />
     </task>
     <task id="LOCAL-00001" summary="rebuild struct">
       <created>1632034594374</created>

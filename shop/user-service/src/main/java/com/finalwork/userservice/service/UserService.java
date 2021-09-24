@@ -1,9 +1,7 @@
 package com.finalwork.userservice.service;
 
-import com.baomidou.mybatisplus.extension.service.IService;
 import com.finalwork.common.bussiness.dto.user.LoginDTO;
-import com.finalwork.common.bussiness.entity.user.User;
-import com.finalwork.common.bussiness.entityDO.UserDO;
+import com.finalwork.common.bussiness.entityDO.user.UserDO;
 import com.finalwork.common.bussiness.entityVO.UserVO;
 import com.finalwork.userservice.convert.UserConvert;
 import com.finalwork.userservice.dao.UserMapper;

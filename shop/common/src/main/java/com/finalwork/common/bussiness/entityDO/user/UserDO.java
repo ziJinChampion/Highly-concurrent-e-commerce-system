@@ -1,4 +1,4 @@
-package com.finalwork.common.bussiness.entityDO;
+package com.finalwork.common.bussiness.entityDO.user;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;

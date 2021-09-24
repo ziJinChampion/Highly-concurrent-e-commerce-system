@@ -1,9 +1,8 @@
 package com.finalwork.userservice.dao;
 
-import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.finalwork.common.bussiness.entityDO.UserDO;
+import com.finalwork.common.bussiness.entityDO.user.UserDO;
 import org.springframework.stereotype.Repository;
 
 @Repository
