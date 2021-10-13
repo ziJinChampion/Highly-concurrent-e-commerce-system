@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: org.springframework.boot:spring-boot-test-autoconfigure:2.1.13.RELEASE">
     <CLASSES>
-      <root url="jar://$USER_HOME$/codeUtils/localRepository/org/springframework/boot/spring-boot-test-autoconfigure/2.1.13.RELEASE/spring-boot-test-autoconfigure-2.1.13.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../localRep/org/springframework/boot/spring-boot-test-autoconfigure/2.1.13.RELEASE/spring-boot-test-autoconfigure-2.1.13.RELEASE.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$USER_HOME$/codeUtils/localRepository/org/springframework/boot/spring-boot-test-autoconfigure/2.1.13.RELEASE/spring-boot-test-autoconfigure-2.1.13.RELEASE-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../localRep/org/springframework/boot/spring-boot-test-autoconfigure/2.1.13.RELEASE/spring-boot-test-autoconfigure-2.1.13.RELEASE-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$USER_HOME$/codeUtils/localRepository/org/springframework/boot/spring-boot-test-autoconfigure/2.1.13.RELEASE/spring-boot-test-autoconfigure-2.1.13.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../localRep/org/springframework/boot/spring-boot-test-autoconfigure/2.1.13.RELEASE/spring-boot-test-autoconfigure-2.1.13.RELEASE-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

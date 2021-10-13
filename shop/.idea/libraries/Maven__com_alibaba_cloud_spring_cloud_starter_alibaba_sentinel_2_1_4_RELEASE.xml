@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: com.alibaba.cloud:spring-cloud-starter-alibaba-sentinel:2.1.4.RELEASE">
     <CLASSES>
-      <root url="jar://$USER_HOME$/codeUtils/localRepository/com/alibaba/cloud/spring-cloud-starter-alibaba-sentinel/2.1.4.RELEASE/spring-cloud-starter-alibaba-sentinel-2.1.4.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../localRep/com/alibaba/cloud/spring-cloud-starter-alibaba-sentinel/2.1.4.RELEASE/spring-cloud-starter-alibaba-sentinel-2.1.4.RELEASE.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$USER_HOME$/codeUtils/localRepository/com/alibaba/cloud/spring-cloud-starter-alibaba-sentinel/2.1.4.RELEASE/spring-cloud-starter-alibaba-sentinel-2.1.4.RELEASE-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../localRep/com/alibaba/cloud/spring-cloud-starter-alibaba-sentinel/2.1.4.RELEASE/spring-cloud-starter-alibaba-sentinel-2.1.4.RELEASE-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$USER_HOME$/codeUtils/localRepository/com/alibaba/cloud/spring-cloud-starter-alibaba-sentinel/2.1.4.RELEASE/spring-cloud-starter-alibaba-sentinel-2.1.4.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../localRep/com/alibaba/cloud/spring-cloud-starter-alibaba-sentinel/2.1.4.RELEASE/spring-cloud-starter-alibaba-sentinel-2.1.4.RELEASE-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
