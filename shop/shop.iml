@@ -208,5 +208,7 @@
     <orderEntry type="library" name="Maven: io.micrometer:micrometer-core:1.1.10" level="project" />
     <orderEntry type="library" name="Maven: org.hdrhistogram:HdrHistogram:2.1.9" level="project" />
     <orderEntry type="library" name="Maven: org.latencyutils:LatencyUtils:2.0.3" level="project" />
+    <orderEntry type="library" name="Maven: org.mapstruct:mapstruct-jdk8:1.2.0.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.mapstruct:mapstruct-processor:1.2.0.Final" level="project" />
   </component>
 </module>
