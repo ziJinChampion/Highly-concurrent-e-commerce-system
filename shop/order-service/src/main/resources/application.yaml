@@ -12,3 +12,18 @@ spring:
         cluster-name: FZ
         metadata:
           version: v1
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8858
+        port: 8719
+
+logging:
+  level:
+    com.finalwork.service.orderservice.feign: debug
+
+feign:
+  client:
+    config:
+      stock-service:
+        connectTimeout: 3000
+        readTimeout: 8000

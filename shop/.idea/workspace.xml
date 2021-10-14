@@ -4,64 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e9605db-2bbd-43b6-aa35-773425621cf2" name="Changes" comment="d some utils">
+    <list default="true" id="3e9605db-2bbd-43b6-aa35-773425621cf2" name="Changes" comment="rebuild the path add service as top url">
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/service/orderservice/config/FeignConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock-service/src/main/java/com/finalwork/service/stockservice/config/FeignConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock-service/src/main/java/com/finalwork/service/stockservice/config/RedisConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/common/common.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/CommonApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/service/common/CommonApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/bussiness/dto/order/OrderCreateDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/service/common/bussiness/dto/order/OrderCreateDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/bussiness/dto/stock/StockReduceDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/service/common/bussiness/dto/stock/StockReduceDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/bussiness/dto/user/LoginDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/service/common/bussiness/dto/user/LoginDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/bussiness/entity/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/service/common/bussiness/entity/order/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/bussiness/entity/order/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/service/common/bussiness/entity/order/OrderItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/bussiness/entity/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/service/common/bussiness/entity/product/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/bussiness/entity/stock/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/service/common/bussiness/entity/stock/Stock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/bussiness/entity/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/service/common/bussiness/entity/user/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/bussiness/entityDO/order/OrderDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/service/common/bussiness/entityDO/order/OrderDO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/bussiness/entityDO/stock/StockDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/service/common/bussiness/entityDO/stock/StockDO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/bussiness/entityDO/user/UserDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/service/common/bussiness/entityDO/user/UserDO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/bussiness/entityVO/UserVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/service/common/bussiness/entityVO/UserVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/config/SwaggerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/service/common/config/SwaggerConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/exception/StockException.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/service/common/exception/StockException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/utils/error/GlobalErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/service/common/utils/error/GlobalErrorCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/utils/result/CommonResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/service/common/utils/result/CommonResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/finalwork/common/utils/result/PageResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/service/common/utils/result/PageResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/test/java/com/finalwork/common/CommonApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/test/java/com/finalwork/service/common/CommonApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/credit-service/src/main/java/com/finalwork/creditservice/CreditServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/credit-service/src/main/java/com/finalwork/service/creditservice/CreditServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/credit-service/src/main/java/com/finalwork/creditservice/controller/CreditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/credit-service/src/main/java/com/finalwork/service/creditservice/controller/CreditController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/credit-service/src/main/java/com/finalwork/creditservice/dao/CreditMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/credit-service/src/main/java/com/finalwork/service/creditservice/dao/CreditMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/credit-service/src/main/java/com/finalwork/creditservice/service/CreditService.java" beforeDir="false" afterPath="$PROJECT_DIR$/credit-service/src/main/java/com/finalwork/service/creditservice/service/CreditService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/credit-service/src/test/java/com/finalwork/creditservice/CreditServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/credit-service/src/test/java/com/finalwork/service/creditservice/CreditServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-service/src/main/java/com/finalwork/fileservice/FileServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/file-service/src/main/java/com/finalwork/service/fileservice/FileServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-service/src/test/java/com/finalwork/fileservice/FileServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/file-service/src/test/java/com/finalwork/service/fileservice/FileServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/finalwork/gateway/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/finalwork/service/gateway/GatewayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/test/java/com/finalwork/gateway/GatewayApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/test/java/com/finalwork/service/gateway/GatewayApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/orderservice/OrderServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/service/orderservice/OrderServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/orderservice/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/service/orderservice/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/orderservice/convert/OrderConvert.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/service/orderservice/convert/OrderConvert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/orderservice/dao/OrderItemMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/service/orderservice/dao/OrderItemMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/orderservice/dao/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/service/orderservice/dao/OrderMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/orderservice/feign/CreditService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/service/orderservice/feign/CreditService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/orderservice/feign/StockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/service/orderservice/feign/StockService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/orderservice/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/service/orderservice/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/mapper/OrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/mapper/OrderMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/test/java/com/finalwork/orderservice/OrderServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/test/java/com/finalwork/service/orderservice/OrderServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/finalwork/productservice/ProductServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/finalwork/service/productservice/ProductServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/test/java/com/finalwork/productservice/ProductServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/test/java/com/finalwork/service/productservice/ProductServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/shop.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock-service/src/main/java/com/finalwork/stockservice/StockServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock-service/src/main/java/com/finalwork/service/stockservice/StockServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock-service/src/main/java/com/finalwork/stockservice/controller/StockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock-service/src/main/java/com/finalwork/service/stockservice/controller/StockController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock-service/src/main/java/com/finalwork/stockservice/dao/StockMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock-service/src/main/java/com/finalwork/service/stockservice/dao/StockMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock-service/src/main/java/com/finalwork/stockservice/service/StockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock-service/src/main/java/com/finalwork/service/stockservice/service/StockService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock-service/src/test/java/com/finalwork/stockservice/StockServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock-service/src/test/java/com/finalwork/service/stockservice/StockServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/userservice/UserServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/service/userservice/UserServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/userservice/config/MybatisPlusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/service/userservice/config/MybatisPlusConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/userservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/service/userservice/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/userservice/convert/UserConvert.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/service/userservice/convert/UserConvert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/userservice/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/service/userservice/dao/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/userservice/feign/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/service/userservice/feign/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/userservice/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/service/userservice/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/test/java/com/finalwork/userservice/UserServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/test/java/com/finalwork/service/userservice/UserServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/service/orderservice/feign/CreditService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/service/orderservice/feign/CreditFeignService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/service/orderservice/feign/StockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/service/orderservice/feign/StockFeignService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/service/orderservice/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/service/orderservice/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock-service/src/main/java/com/finalwork/service/stockservice/service/StockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock-service/src/main/java/com/finalwork/service/stockservice/service/StockService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/service/userservice/feign/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/service/userservice/feign/OrderService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,8 +30,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -246,7 +199,8 @@
       <workItem from="1632452990007" duration="2982000" />
       <workItem from="1632585251886" duration="169000" />
       <workItem from="1634093941135" duration="2047000" />
-      <workItem from="1634105393258" duration="3323000" />
+      <workItem from="1634105393258" duration="7076000" />
+      <workItem from="1634173218904" duration="6774000" />
     </task>
     <task id="LOCAL-00001" summary="rebuild struct">
       <created>1632034594374</created>
@@ -262,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632219411901</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="rebuild the path add service as top url">
+      <created>1634109634834</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1634109634834</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,6 +256,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="rebuild struct" />
     <MESSAGE value="add some utils" />
-    <option name="LAST_COMMIT_MESSAGE" value="add some utils" />
+    <MESSAGE value="rebuild the path add service as top url" />
+    <option name="LAST_COMMIT_MESSAGE" value="rebuild the path add service as top url" />
   </component>
 </project>

@@ -9,7 +9,7 @@ import com.finalwork.service.common.utils.result.CommonResult;
 import com.finalwork.service.orderservice.convert.OrderConvert;
 import com.finalwork.service.orderservice.dao.OrderItemMapper;
 import com.finalwork.service.orderservice.dao.OrderMapper;
-import com.finalwork.service.orderservice.feign.StockService;
+import com.finalwork.service.orderservice.feign.StockFeignService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,7 +21,7 @@ import java.util.List;
 public class OrderService {
 
     @Autowired
-    StockService stockService;
+    StockFeignService stockFeignService;
 
     @Autowired
     OrderMapper orderMapper;
@@ -53,7 +53,7 @@ public class OrderService {
         for (int i = 0; i < totalItem; i++){
             Long pId = productId.get(i);
             Integer pNum = productNum.get(i);
-            CommonResult<Boolean> result = stockService.deductStock(productId.get(i),productNum.get(i));
+            CommonResult<Boolean> result = stockFeignService.deductStock(productId.get(i),productNum.get(i));
             if (result.getData()){
                 OrderItem temp = new OrderItem(orderId,productId.get(i),productNum.get(i));
                 orderItemMapper.insert(temp);
@@ -69,6 +69,7 @@ public class OrderService {
      * @Author southWind
      * @param orderCreateDTO
      */
+    @Transactional(rollbackFor = Exception.class)
     public Long InitOrderId(OrderCreateDTO orderCreateDTO){
         Date date = new Date();
         Order order = new Order(

@@ -8,6 +8,7 @@ import com.finalwork.service.common.utils.error.GlobalErrorCode;
 import com.finalwork.service.common.utils.result.CommonResult;
 import com.finalwork.service.stockservice.dao.StockMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -15,6 +16,9 @@ public class StockService {
 
     @Autowired
     StockMapper stockMapper;
+
+    @Autowired
+    RedisTemplate redisTemplate;
 
     public CommonResult<String> deductStock(Long id, Integer num){
         StockDO stockDO = stockMapper.getStockByProductId(id);
@@ -31,4 +35,6 @@ public class StockService {
             return failed(GlobalErrorCode.STOCK_NOT_ENOUGH.getCode(), GlobalErrorCode.STOCK_NOT_ENOUGH.getMessage());
         }
     }
+
+
 }
