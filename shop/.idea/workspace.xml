@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e9605db-2bbd-43b6-aa35-773425621cf2" name="Changes" comment="rebuild the path add service as top url">
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/service/orderservice/config/FeignConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-service/src/main/java/com/finalwork/service/stockservice/config/FeignConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-service/src/main/java/com/finalwork/service/stockservice/config/RedisConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/service/orderservice/feign/CreditService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/service/orderservice/feign/CreditFeignService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/service/orderservice/feign/StockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/service/orderservice/feign/StockFeignService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/service/orderservice/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/finalwork/service/orderservice/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock-service/src/main/java/com/finalwork/service/stockservice/service/StockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock-service/src/main/java/com/finalwork/service/stockservice/service/StockService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/service/userservice/feign/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/service/userservice/feign/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +193,8 @@
       <workItem from="1632585251886" duration="169000" />
       <workItem from="1634093941135" duration="2047000" />
       <workItem from="1634105393258" duration="7076000" />
-      <workItem from="1634173218904" duration="6774000" />
+      <workItem from="1634173218904" duration="9213000" />
+      <workItem from="1634285915035" duration="682000" />
     </task>
     <task id="LOCAL-00001" summary="rebuild struct">
       <created>1632034594374</created>

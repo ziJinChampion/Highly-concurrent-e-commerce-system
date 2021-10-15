@@ -17,11 +17,11 @@ spring:
         port: 8719
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/userbase?useSSL=false&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://47.113.190.224:3306/userbase?useSSL=false&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&serverTimezone=Asia/Shanghai
     username: root
     password: 123456
   redis:
-    host: 127.0.0.1
+    host: 47.113.190.224
     port: 6379
     password:
     timeout: 1000

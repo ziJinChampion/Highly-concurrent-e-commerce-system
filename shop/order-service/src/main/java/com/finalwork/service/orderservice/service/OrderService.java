@@ -10,6 +10,8 @@ import com.finalwork.service.orderservice.convert.OrderConvert;
 import com.finalwork.service.orderservice.dao.OrderItemMapper;
 import com.finalwork.service.orderservice.dao.OrderMapper;
 import com.finalwork.service.orderservice.feign.StockFeignService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,6 +21,8 @@ import java.util.List;
 
 @Service
 public class OrderService {
+
+    Logger log = LoggerFactory.getLogger(OrderService.class);
 
     @Autowired
     StockFeignService stockFeignService;
@@ -31,6 +35,7 @@ public class OrderService {
 
     @Transactional(rollbackFor = StockException.class)
     public String createOrder(OrderCreateDTO orderCreateDTO) {
+        log.info("create order");
         try {
             if (orderCreate(orderCreateDTO)){
                 //TODO: jia ji fen
