@@ -7,17 +7,17 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 127.0.0.1:8848
+        server-addr: 47.113.190.224:8848
         cluster-name: FZ
         metadata:
           version: v1
     sentinel:
       transport:
-        dashboard: 127.0.0.1:8858
+        dashboard: 47.113.190.224:8858
         port: 8719
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://47.113.190.224/userbase?useSSL=false&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://47.113.190.224/user_base?useSSL=false&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&serverTimezone=Asia/Shanghai
     username: root
     password: 123456
   redis:

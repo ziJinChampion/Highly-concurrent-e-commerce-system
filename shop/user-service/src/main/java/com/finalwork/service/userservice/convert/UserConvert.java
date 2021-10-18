@@ -1,5 +1,6 @@
 package com.finalwork.service.userservice.convert;
 
+import com.finalwork.service.common.bussiness.entity.user.SysUser;
 import com.finalwork.service.common.bussiness.entityDO.user.UserDO;
 import com.finalwork.service.common.bussiness.entityVO.UserVO;
 import org.mapstruct.Mapper;
@@ -10,4 +11,6 @@ public interface UserConvert {
     UserConvert INSTANCE = Mappers.getMapper(UserConvert.class);
 
     UserVO convert(UserDO bean);
+
+    SysUser convert(UserVO bean);
 }

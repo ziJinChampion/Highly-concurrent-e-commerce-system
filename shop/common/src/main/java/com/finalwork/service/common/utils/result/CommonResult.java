@@ -19,6 +19,11 @@ public class CommonResult<T> {
         this.message = message;
         this.data = (T) o;
     }
+
+    public  CommonResult (Object o,String message){
+        this.data = (T) data;
+        this.message = message;
+    }
     //TODO: checkerror
     public static <T> CommonResult<T> success (T data){
         return new CommonResult<>(200,"success",data);
@@ -31,5 +36,8 @@ public class CommonResult<T> {
         return new CommonResult<>(code,message);
     }
 
+    public static <T> CommonResult<T> error(T data, String message){
+        return new CommonResult<>(data,message);
+    }
 
 }

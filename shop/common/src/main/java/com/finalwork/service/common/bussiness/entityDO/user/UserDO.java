@@ -23,5 +23,7 @@ public class UserDO {
     private String mobile;
     @TableField("remark")
     private String remark;
+    @TableField("status")
+    private Integer status;
 
 }

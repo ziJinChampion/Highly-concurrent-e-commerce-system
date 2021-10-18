@@ -30,4 +30,6 @@ public class User {
     @ApiModelProperty(value = "userRemark")
     @TableField("remark")
     private String remark;
+    @TableField("status")
+    private Integer status;
 }
