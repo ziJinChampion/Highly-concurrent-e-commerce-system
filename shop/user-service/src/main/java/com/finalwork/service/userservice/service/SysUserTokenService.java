@@ -3,6 +3,7 @@ package com.finalwork.service.userservice.service;
 import com.finalwork.service.userservice.config.shiro.token.SysUserToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
 @Service

@@ -10,7 +10,7 @@ import lombok.experimental.Accessors;
 @ApiModel("userVO")
 public class UserVO {
     @ApiModelProperty(value = "userId")
-    private Integer id;
+    private Long id;
     @ApiModelProperty(value = "userName")
     private String name;
     @ApiModelProperty(value = "userPassword")

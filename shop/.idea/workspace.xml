@@ -5,28 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e9605db-2bbd-43b6-aa35-773425621cf2" name="Changes" comment="rebuild the path add service as top url">
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/service/common/bussiness/entity/user/SysUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/service/common/utils/common/StringUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/service/common/utils/common/TokenGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/service/userservice/config/shiro/config/ShiroConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/service/userservice/config/shiro/credentials/CredentialsMatcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/service/userservice/config/shiro/credentials/RetryLimitCredentialsMatcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/service/userservice/config/shiro/filter/OAuth2Filter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/service/userservice/config/shiro/realm/OAuth2Realm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/service/userservice/config/shiro/token/OAuth2Token.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/service/userservice/config/shiro/token/SysUserToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/service/userservice/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/service/userservice/service/LoginService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/service/userservice/service/SysUserTokenService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/finalwork/service/common/bussiness/entity/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/service/common/bussiness/entity/user/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/finalwork/service/common/bussiness/entityDO/user/UserDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/service/common/bussiness/entityDO/user/UserDO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/finalwork/service/common/utils/result/CommonResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/finalwork/service/common/utils/result/CommonResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/service/userservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/service/userservice/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/service/userservice/convert/UserConvert.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/service/userservice/convert/UserConvert.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/service/userservice/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/finalwork/service/userservice/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application-dev.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application-dev.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,8 +77,8 @@
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
-      <command value="mvn clean" />
       <command value="mvn clean install" />
+      <command value="mvn clean" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -108,7 +88,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
+  <component name="RunManager" selected="Spring Boot.StockServiceApplication">
     <configuration name="tool" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.finalwork.userservice.tools.tool" />
       <module name="user-service" />
@@ -174,6 +154,9 @@
     <configuration name="StockServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="stock-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.finalwork.service.stockservice.StockServiceApplication" />
+      <option name="PROGRAM_PARAMETERS" value="--spring.profiles.active=dev" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -230,7 +213,9 @@
       <workItem from="1634105393258" duration="7076000" />
       <workItem from="1634173218904" duration="9213000" />
       <workItem from="1634285915035" duration="2775000" />
-      <workItem from="1634526865930" duration="10577000" />
+      <workItem from="1634526865930" duration="10634000" />
+      <workItem from="1634606499098" duration="8340000" />
+      <workItem from="1634624532923" duration="2796000" />
     </task>
     <task id="LOCAL-00001" summary="rebuild struct">
       <created>1632034594374</created>
@@ -270,7 +255,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/rebuild" />
+                        <option value="test" />
                       </list>
                     </value>
                   </entry>

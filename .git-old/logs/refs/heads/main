@@ -1,0 +1,5 @@
+0000000000000000000000000000000000000000 5921a36141ae5d2a1b13dcd53edfa160d330a946 southwind <2932447829@qq.com> 1634093872 +0800	clone: from git@github.com:ziJinChampion/Highly-concurrent-e-commerce-system.git
+5921a36141ae5d2a1b13dcd53edfa160d330a946 6a1ef9ac9df6abca6d3d710617d796da1c5eac0b southwind <2932447829@qq.com> 1634095840 +0800	commit: add mapstruct dependency
+6a1ef9ac9df6abca6d3d710617d796da1c5eac0b cf624d547b8477c57f5a77bfc114d3c2e72dd5ab southwind <2932447829@qq.com> 1634109700 +0800	merge rebuild: Fast-forward
+cf624d547b8477c57f5a77bfc114d3c2e72dd5ab e9919f9f108594665e972654c91e49e73ff19e63 southwind <2932447829@qq.com> 1634289728 +0800	merge dev: Fast-forward
+e9919f9f108594665e972654c91e49e73ff19e63 82dbcb5d9def4662a347de43137e8fe8d98a9cb7 southwind <2932447829@qq.com> 1634291604 +0800	merge dev: Fast-forward

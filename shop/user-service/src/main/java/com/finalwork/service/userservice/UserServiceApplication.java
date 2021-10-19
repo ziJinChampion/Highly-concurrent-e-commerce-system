@@ -17,12 +17,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @MapperScan("com.finalwork.service.userservice.dao")
 public class UserServiceApplication {
 
-    @Bean
-    @LoadBalanced
-    public RestTemplate restTemplate(){
-        return new RestTemplate();
-    }
-
     public static void main(String[] args) {
         SpringApplication.run(UserServiceApplication.class, args);
     }

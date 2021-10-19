@@ -15,15 +15,16 @@ spring:
       transport:
         dashboard: 47.113.190.224:8858
         port: 8719
+        client-ip: 
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://47.113.190.224/user_base?useSSL=false&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&serverTimezone=Asia/Shanghai
     username: root
     password: 123456
   redis:
     host: 47.113.190.224
     port: 6379
-    password:
+    password: 123456
     timeout: 1000
 
 management:

@@ -1,11 +1,14 @@
 package com.finalwork.service.userservice.controller;
 
 import com.finalwork.service.common.bussiness.dto.user.LoginDTO;
+import com.finalwork.service.common.bussiness.dto.user.UserRegisterDTO;
 import com.finalwork.service.common.bussiness.entityVO.UserVO;
 import com.finalwork.service.common.utils.result.CommonResult;
 import com.finalwork.service.userservice.service.LoginService;
 import com.finalwork.service.userservice.service.UserService;
+import com.finalwork.service.userservice.vo.LoginRespVO;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -22,13 +25,13 @@ public class LoginController {
     @Autowired
     LoginService loginService;
 
-    @PostMapping("/login")
-    public CommonResult<String> login(@RequestBody @Validated LoginDTO loginDTO, HttpSession session){
-        if (loginService.checkLogin(loginDTO)){
-            session.setAttribute("username",loginDTO.getUsername());
-            return success("success");
-        }
-        return success("username or password error!");
+    @Autowired
+    UserService userService;
+
+    @PostMapping
+    @ApiOperation(value = "login")
+    public CommonResult<LoginRespVO> login(@RequestBody @Validated LoginDTO loginDTO){
+        return success(loginService.checkLogin(loginDTO));
     }
 
     @GetMapping("/logout")
@@ -40,5 +43,11 @@ public class LoginController {
     @GetMapping("/current")
     public CommonResult<UserVO> getCurrentUser(HttpSession session){
         return success(loginService.getCurrentUser((String)session.getAttribute("username")));
+    }
+
+    @ApiOperation(value = "register")
+    @PostMapping("/register")
+    public CommonResult<UserVO> register(@RequestBody @Validated UserRegisterDTO dto){
+        return userService.userRegister(dto);
     }
 }

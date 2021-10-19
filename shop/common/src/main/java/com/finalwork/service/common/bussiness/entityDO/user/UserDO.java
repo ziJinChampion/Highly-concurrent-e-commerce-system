@@ -12,18 +12,18 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 public class UserDO {
     @TableId(value = "id", type = IdType.AUTO)
-    private Integer id;
-    @TableField("name")
+    private Long id;
+    @TableField(value = "name")
     private String name;
-    @TableField("password")
+    @TableField(value = "password")
     private String password;
-    @TableField("photo")
+    @TableField(value = "photo")
     private String photo;
-    @TableField("mobile")
+    @TableField(value = "mobile")
     private String mobile;
-    @TableField("remark")
+    @TableField(value = "remark")
     private String remark;
-    @TableField("status")
+    @TableField(value = "status")
     private Integer status;
 
 }

@@ -28,19 +28,20 @@ public class ShiroConfiguration {
         shiroFilter.setFilters(filters);
         // 访问路径拦截配置，"anon"表示无需验证，未登录也可访问
         Map<String, String> filterMap = new LinkedHashMap<>();
-        filterMap.put("/webjars/**", "anon");
-        // 查看SQL监控（druid）
-        filterMap.put("/druid/**", "anon");
-        // 首页和登录页面
-        filterMap.put("/", "anon");
-        filterMap.put("/sys/login", "anon");
-        // swagger
-        filterMap.put("/swagger-ui.html", "anon");
-        filterMap.put("/swagger-resources", "anon");
-        filterMap.put("/v2/api-docs", "anon");
-        filterMap.put("/webjars/springfox-swagger-ui/**", "anon");
-        // 其他所有路径交给OAuth2Filter处理
-        filterMap.put("/**", "oauth2");
+//        filterMap.put("/webjars/**", "anon");
+//        // 查看SQL监控（druid）
+//        filterMap.put("/druid/**", "anon");
+//        // 首页和登录页面
+//        filterMap.put("/", "anon");
+//        filterMap.put("/login", "anon");
+//        // swagger
+//        filterMap.put("/swagger-ui.html", "anon");
+//        filterMap.put("/swagger-resources", "anon");
+//        filterMap.put("/v2/api-docs", "anon");
+//        filterMap.put("/webjars/springfox-swagger-ui/**", "anon");
+//        // 其他所有路径交给OAuth2Filter处理
+//        filterMap.put("/**", "oauth2");
+        filterMap.put("/**","anon");
         shiroFilter.setFilterChainDefinitionMap(filterMap);
         return shiroFilter;
     }
