@@ -9,7 +9,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="stock-service" />
         <module name="common" />
-        <module name="credit-service" />
         <module name="product-service" />
         <module name="user-service" />
         <module name="order-service" />
