@@ -4,8 +4,8 @@ import com.finalwork.service.common.bussiness.entity.user.SysUser;
 import com.finalwork.service.userservice.config.shiro.token.OAuth2Token;
 import com.finalwork.service.userservice.config.shiro.token.SysUserToken;
 import com.finalwork.service.userservice.convert.UserConvert;
-import com.finalwork.service.userservice.service.SysUserTokenService;
-import com.finalwork.service.userservice.service.UserService;
+import com.finalwork.service.userservice.service.lmpl.SysUserTokenServiceImpl;
+import com.finalwork.service.userservice.service.lmpl.UserServiceImpl;
 import org.springframework.stereotype.Component;
 
 
@@ -23,15 +23,14 @@ import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 @Component
 public class OAuth2Realm extends AuthorizingRealm {
 
     @Autowired
-    UserService userService;
+    UserServiceImpl userServiceImpl;
     @Autowired
-    SysUserTokenService sysUserTokenService;
+    SysUserTokenServiceImpl sysUserTokenService;
 
     @Override
     public boolean supports(AuthenticationToken token) {
@@ -66,7 +65,7 @@ public class OAuth2Realm extends AuthorizingRealm {
             throw new IncorrectCredentialsException("token失效，请重新登录");
         }
         // 查询用户信息
-        SysUser user = UserConvert.INSTANCE.convert(userService.findById(sysUserToken.getUserId()));
+        SysUser user = UserConvert.INSTANCE.convert(userServiceImpl.findById(sysUserToken.getUserId()));
         // 账号被锁定
         if(user.getStatus() == 0){
             throw new LockedAccountException("账号已被锁定,请联系管理员");

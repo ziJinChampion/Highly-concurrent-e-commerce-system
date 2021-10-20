@@ -3,12 +3,15 @@ package com.finalwork.service.common.utils.result;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 @Data
 @NoArgsConstructor
-public class CommonResult<T> {
+public class CommonResult<T> implements Serializable {
     private Integer code;
     private String message;
     private T data;
+    private String detailMessage;
 
     public CommonResult(Integer code, String message){
         this(code, message, null);
@@ -40,4 +43,14 @@ public class CommonResult<T> {
         return new CommonResult<>(data,message);
     }
 
+    public static <T> CommonResult<T> error(Integer code, String message, String detailMessage){
+        CommonResult<T> result = new CommonResult<>();
+        result.setCode(code);
+        result.setMessage(message);
+        result.setDetailMessage(detailMessage);
+        return result;
+    }
+    public static <T> CommonResult<T> error(CommonResult<?> result){
+        return error(result.getCode(), result.getMessage(), result.getDetailMessage());
+    }
 }
