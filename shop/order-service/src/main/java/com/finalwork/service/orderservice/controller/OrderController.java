@@ -4,6 +4,7 @@ import com.finalwork.service.common.bussiness.dto.order.OrderCreateDTO;
 import com.finalwork.service.common.utils.error.GlobalErrorCode;
 import com.finalwork.service.common.utils.result.CommonResult;
 import com.finalwork.service.orderservice.service.OrderService;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,7 +21,8 @@ public class OrderController {
     @Autowired
     OrderService orderService;
 
-    @PostMapping("/")
+    @PostMapping
+    @ApiOperation(value = "createOrder")
     public CommonResult<String> createOrder(@RequestBody @Validated OrderCreateDTO orderCreateDTO){
         try {
             return success(orderService.createOrder(orderCreateDTO));

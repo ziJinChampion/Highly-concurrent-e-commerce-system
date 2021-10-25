@@ -17,11 +17,23 @@ public class Product {
     /**
      * productPhoto
      */
-    private Integer photo;
+    private String photo;
     /**
      * productPrice
      */
-    private String price;
+    private double price;
+
+    private Integer itemId;
+
+    private String remark;
+
+    private String detail;
+    //shou cang
+    private Integer star;
+
+    private Long sellerId;
+
+    private String sellerName;
 
 
 }

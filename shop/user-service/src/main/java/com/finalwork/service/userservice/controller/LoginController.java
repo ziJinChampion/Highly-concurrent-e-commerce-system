@@ -6,6 +6,8 @@ import com.finalwork.service.common.bussiness.entityVO.UserVO;
 import com.finalwork.service.common.utils.result.CommonResult;
 import com.finalwork.service.userservice.service.LoginService;
 import com.finalwork.service.userservice.service.UserService;
+import com.finalwork.service.userservice.service.lmpl.LoginServiceImpl;
+import com.finalwork.service.userservice.service.lmpl.UserServiceImpl;
 import com.finalwork.service.userservice.vo.LoginRespVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -32,17 +34,6 @@ public class LoginController {
     @ApiOperation(value = "login")
     public CommonResult<LoginRespVO> login(@RequestBody @Validated LoginDTO loginDTO){
         return success(loginService.checkLogin(loginDTO));
-    }
-
-    @GetMapping("/logout")
-    public CommonResult<String> logout(HttpSession session){
-        session.invalidate();
-        return success("success to logout!");
-    }
-
-    @GetMapping("/current")
-    public CommonResult<UserVO> getCurrentUser(HttpSession session){
-        return success(loginService.getCurrentUser((String)session.getAttribute("username")));
     }
 
     @ApiOperation(value = "register")
