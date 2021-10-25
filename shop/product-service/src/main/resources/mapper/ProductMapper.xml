@@ -4,8 +4,21 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.finalwork.service.productservice.dao.ProductMapper">
 
+    <resultMap id="ProductMap" type="com.finalwork.service.common.bussiness.entityDO.product.ProductDO">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="photo" column="photo"/>
+        <result property="itemId" column="item_id"/>
+        <result property="star" column="star"/>
+        <result property="sellerId" column="seller_id"/>
+        <result property="sellerName" column="seller_name"/>
+        <result property="remark" column="remark"/>
+        <result property="price" column="price"/>
+        <result property="detail" column="detail"/>
+    </resultMap>
+
     <select id="getList" parameterType="com.finalwork.service.common.bussiness.dto.product.ProductSearchDTO"
-            resultType="com.finalwork.service.common.bussiness.entityDO.product.ProductDO">
+            resultMap="ProductMap">
         select *
         from product
         where 1=1

@@ -32,7 +32,7 @@ public class ProductDO {
     @TableField(value = "price")
     private double price;
 
-    @TableField(value = "itemId")
+    @TableField(value = "item_id")
     private Integer itemId;
 
     @TableField(value = "remark")
@@ -44,9 +44,9 @@ public class ProductDO {
     @TableField(value = "star")
     private Integer star;
 
-    @TableField(value = "sellerId")
+    @TableField(value = "seller_id")
     private Long sellerId;
 
-    @TableField(value = "sellerName")
+    @TableField(value = "seller_name")
     private String sellerName;
 }
