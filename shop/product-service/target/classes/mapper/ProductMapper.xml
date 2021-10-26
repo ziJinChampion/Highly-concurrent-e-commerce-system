@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.finalwork.service.productservice.dao.ProductMapper">
+
+    <resultMap id="ProductMap" type="com.finalwork.service.common.bussiness.entityDO.product.ProductDO">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="photo" column="photo"/>
+        <result property="itemId" column="item_id"/>
+        <result property="star" column="star"/>
+        <result property="sellerId" column="seller_id"/>
+        <result property="sellerName" column="seller_name"/>
+        <result property="remark" column="remark"/>
+        <result property="price" column="price"/>
+        <result property="detail" column="detail"/>
+    </resultMap>
+
+    <select id="getList" parameterType="com.finalwork.service.common.bussiness.dto.product.ProductSearchDTO"
+            resultMap="ProductMap">
+        select *
+        from product
+        where 1=1
+            <if test="id != null || id != 0">
+                and id = #{id}
+            </if>
+            <if test="name != null || name !=''">
+                and name = #{name}
+            </if>
+            <if test="star !=null || star != 0 ">
+                and star > #{star}
+            </if>
+        <choose>
+            <when test="sort == 1">
+                ORDER BY star desc
+            </when>
+            <when test="sort == 2">
+                ORDER BY star asc
+            </when>
+            <when test="sort ==3 ">
+                ORDER BY price desc
+            </when>
+            <when test="sort ==4 ">
+                ORDER BY price asc
+            </when>
+        </choose>
+
+    </select>
+    <select id="count" resultType="java.lang.Integer">
+        select count(`id`) from product
+    </select>
+
+</mapper>

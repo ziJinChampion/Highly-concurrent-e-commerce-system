@@ -1,0 +1,34 @@
+server:
+  port: 9004
+
+spring:
+  application:
+    name: product-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        cluster-name: FZ
+        metadata:
+          version: v1
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8858
+        port: 8719
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/product_base?useSSL=false&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    timeout: 1000
+  profiles:
+    active: dev
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
