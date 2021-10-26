@@ -5,7 +5,9 @@ package com.finalwork.service.common.utils.error;
 public enum GlobalErrorCode {
     INNER_ERROR(500,"inner error"),
     STOCK_NOT_ENOUGH(511,"stock is not enough"),
-    PRODUCT_IS_NOT_EXIST(512,"product is not exist");
+    PRODUCT_IS_NOT_EXIST(512,"product is not exist"),
+    USER_NO_PERMISSIONS(513,"user no permissions");
+
 
     private Integer code ;
     private String message;

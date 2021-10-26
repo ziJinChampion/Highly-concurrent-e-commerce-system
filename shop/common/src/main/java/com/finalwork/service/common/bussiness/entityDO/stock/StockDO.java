@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import lombok.experimental.Accessors;
+import org.springframework.validation.annotation.Validated;
 
 @Data
 @Accessors
@@ -13,8 +14,10 @@ import lombok.experimental.Accessors;
 public class StockDO {
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
-    @TableField(value = "productId")
+    @TableField(value = "product_id")
     private Long productId;
-    @TableField(value = "num")
+    @TableField(value = "number")
     private Integer num;
+    @TableField(value = "seller_id")
+    private Long sellerId;
 }

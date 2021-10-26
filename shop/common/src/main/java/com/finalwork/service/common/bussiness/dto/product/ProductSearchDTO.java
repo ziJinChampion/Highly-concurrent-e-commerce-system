@@ -21,4 +21,8 @@ public class ProductSearchDTO {
 
     @ApiModelProperty(value = "sort by ", required = false, example = "123")
     private Integer sort;
+
+    private Integer pageSize;
+
+    private Integer pageNum;
 }
