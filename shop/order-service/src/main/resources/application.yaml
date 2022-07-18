@@ -1,9 +1,12 @@
 server:
   port: 9001
 
+
+
 spring:
   application:
     name: order-service
+
 
   cloud:
     nacos:
@@ -16,6 +19,8 @@ spring:
       transport:
         dashboard: 127.0.0.1:8858
         port: 8719
+  profiles:
+    active: dev
 
 logging:
   level:

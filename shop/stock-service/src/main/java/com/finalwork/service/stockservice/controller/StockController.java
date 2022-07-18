@@ -20,8 +20,8 @@ public class StockController {
     @Autowired
     StringRedisTemplate redisTemplate;
 
-    @GetMapping("/{id}/{num}")
-    public CommonResult<Boolean> deductStock(@PathVariable("id")Long id,@PathVariable("num")Integer num){
+    @GetMapping
+    public CommonResult<Boolean> deductStock(@RequestParam("id")Long id,@RequestParam("num")Integer num){
         CommonResult result = stockService.deductStock(id,num);
         if (result.getCode() == 200){
             return success(true);
@@ -30,10 +30,8 @@ public class StockController {
         }
     }
 
-    @PutMapping
+    @PostMapping
     public CommonResult<Integer> addStock(@RequestBody StockAddDTO stockAddDTO){
-        //TODO: get userID
-        stockAddDTO.setUserId(100L);
         return stockService.addStock(stockAddDTO);
     }
 

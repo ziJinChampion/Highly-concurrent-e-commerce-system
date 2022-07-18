@@ -12,3 +12,5 @@ spring:
         cluster-name: FZ
         metadata:
           version: v1
+  profiles:
+    active: dev

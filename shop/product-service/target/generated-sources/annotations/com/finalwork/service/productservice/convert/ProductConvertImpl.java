@@ -1,5 +1,7 @@
 package com.finalwork.service.productservice.convert;
 
+import com.finalwork.service.common.bussiness.dto.product.ProductAddDTO;
+import com.finalwork.service.common.bussiness.dto.product.ProductModifyDTO;
 import com.finalwork.service.common.bussiness.entityDO.product.ProductDO;
 import com.finalwork.service.common.bussiness.entityVO.product.ProductVO;
 import com.finalwork.service.common.utils.result.PageResult;
@@ -9,8 +11,8 @@ import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2021-10-25T09:05:13+0800",
-    comments = "version: 1.4.0.Final, compiler: javac, environment: Java 1.8.0_292 (Private Build)"
+    date = "2022-03-15T12:02:29+0800",
+    comments = "version: 1.4.0.Final, compiler: javac, environment: Java 1.8.0_311 (Oracle Corporation)"
 )
 public class ProductConvertImpl implements ProductConvert {
 
@@ -32,6 +34,8 @@ public class ProductConvertImpl implements ProductConvert {
             productVO.setSellerId( String.valueOf( bean.getSellerId() ) );
         }
         productVO.setSellerName( bean.getSellerName() );
+        productVO.setDetail( bean.getDetail() );
+        productVO.setRemark( bean.getRemark() );
 
         return productVO;
     }
@@ -64,5 +68,54 @@ public class ProductConvertImpl implements ProductConvert {
         pageResult.setTotal( page.getTotal() );
 
         return pageResult;
+    }
+
+    @Override
+    public ProductDO convert(ProductAddDTO bean) {
+        if ( bean == null ) {
+            return null;
+        }
+
+        ProductDO productDO = new ProductDO();
+
+        productDO.setName( bean.getName() );
+        productDO.setPhoto( bean.getPhoto() );
+        if ( bean.getPrice() != null ) {
+            productDO.setPrice( bean.getPrice() );
+        }
+        productDO.setItemId( bean.getItemId() );
+        productDO.setRemark( bean.getRemark() );
+        productDO.setDetail( bean.getDetail() );
+        if ( bean.getSellerId() != null ) {
+            productDO.setSellerId( bean.getSellerId().longValue() );
+        }
+        productDO.setSellerName( bean.getSellerName() );
+
+        return productDO;
+    }
+
+    @Override
+    public ProductDO convert(ProductModifyDTO bean) {
+        if ( bean == null ) {
+            return null;
+        }
+
+        ProductDO productDO = new ProductDO();
+
+        productDO.setId( bean.getId() );
+        productDO.setName( bean.getName() );
+        productDO.setPhoto( bean.getPhoto() );
+        if ( bean.getPrice() != null ) {
+            productDO.setPrice( bean.getPrice() );
+        }
+        productDO.setItemId( bean.getItemId() );
+        productDO.setRemark( bean.getRemark() );
+        productDO.setDetail( bean.getDetail() );
+        if ( bean.getSellerId() != null ) {
+            productDO.setSellerId( bean.getSellerId().longValue() );
+        }
+        productDO.setSellerName( bean.getSellerName() );
+
+        return productDO;
     }
 }

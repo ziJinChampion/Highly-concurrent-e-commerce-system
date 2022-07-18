@@ -7,8 +7,8 @@ import org.springframework.data.redis.core.RedisTemplate;
 @Configuration
 public class RedisConfiguration {
 
-    @Bean
-    public RedisTemplate redisTemplate(){
-        return new RedisTemplate();
-    }
+//    @Bean
+//    public RedisTemplate redisTemplate(){
+//        return new RedisTemplate();
+//    }
 }

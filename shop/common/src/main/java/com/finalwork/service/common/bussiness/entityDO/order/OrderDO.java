@@ -6,10 +6,11 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import lombok.experimental.Accessors;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
-@TableName("order")
+@TableName("`order`")
 @Data
 @Accessors(chain = true)
 public class OrderDO {
@@ -17,10 +18,14 @@ public class OrderDO {
     private Long id;
     @TableField("name")
     private String name;
-    @TableField("totalPrice")
+    @TableField("cost")
     private String totalPrice;
-    @TableField("addTime")
+    @TableField("create_time")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date addTime;
-    @TableField("status")
-    private Integer status;
+    @TableField("finish_time")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private Date finishTime;
+    @TableField("user_id")
+    private Integer userId;
 }

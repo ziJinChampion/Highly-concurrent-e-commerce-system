@@ -26,8 +26,8 @@ spring:
     port: 6379
     password:
     timeout: 1000
-  #profiles:
-    #active: dev
+  profiles:
+    active: dev
 
 management:
   endpoints:

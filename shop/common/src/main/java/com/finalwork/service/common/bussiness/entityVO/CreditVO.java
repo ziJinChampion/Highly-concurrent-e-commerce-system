@@ -12,6 +12,6 @@ public class CreditVO {
     @ApiModelProperty(value = "userId", required = true, example = "1233214")
     private Long userId;
 
-    @ApiModelProperty(value = "credit-point", required = true, example = "100.2")
-    private String point;
+    @ApiModelProperty(value = "point", required = true, example = "100.2")
+    private Double point;
 }

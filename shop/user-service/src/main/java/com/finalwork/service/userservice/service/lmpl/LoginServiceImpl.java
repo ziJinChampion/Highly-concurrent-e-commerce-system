@@ -25,6 +25,7 @@ public class LoginServiceImpl implements LoginService {
     @Autowired
     RedisTemplate redisTemplate;
 
+    @Override
     public LoginRespVO checkLogin(LoginDTO loginDTO){
         UserDO user = userMapper.getOneByUserName(loginDTO.getUsername());
         LoginRespVO loginRespVO = new LoginRespVO();
@@ -41,6 +42,7 @@ public class LoginServiceImpl implements LoginService {
         return loginRespVO;
     }
 
+    @Override
     public UserVO getCurrentUser(String username){
         UserDO userDO = userMapper.getOneByUserName(username);
         return UserConvert.INSTANCE.convert(userDO);
@@ -62,6 +64,7 @@ public class LoginServiceImpl implements LoginService {
             sysUserToken.setExpireTime(expireTime);
             redisTemplate.opsForValue().set(userId, token, EXPIRE*10, TimeUnit.SECONDS);
         }else {
+            sysUserToken.setUserId(userId);
             sysUserToken.setToken(token);
             sysUserToken.setLastUpdateTime(now);
             sysUserToken.setExpireTime(expireTime);

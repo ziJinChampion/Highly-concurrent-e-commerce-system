@@ -21,6 +21,7 @@ import static com.finalwork.service.common.utils.result.CommonResult.success;
 
 @RestController
 @Api(tags = "loginCenter")
+@CrossOrigin
 @RequestMapping("/login")
 public class LoginController {
 
@@ -31,14 +32,16 @@ public class LoginController {
     UserService userService;
 
     @PostMapping
-    @ApiOperation(value = "login")
+    @ApiOperation(value = "/login")
     public CommonResult<LoginRespVO> login(@RequestBody @Validated LoginDTO loginDTO){
         return success(loginService.checkLogin(loginDTO));
     }
 
-    @ApiOperation(value = "register")
+    @ApiOperation(value = "/register")
     @PostMapping("/register")
     public CommonResult<UserVO> register(@RequestBody @Validated UserRegisterDTO dto){
         return userService.userRegister(dto);
     }
+
+
 }

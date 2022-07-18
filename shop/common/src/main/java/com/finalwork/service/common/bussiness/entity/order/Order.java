@@ -8,6 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -24,6 +25,7 @@ public class Order {
     @TableField("totalPrice")
     private String totalPrice;
     @TableField("addTime")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date addTime;
     @TableField("status")
     /**
@@ -33,11 +35,18 @@ public class Order {
      * -1 cancel
      */
     private Integer status;
+    @TableField("finish_time")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private Date finishTime;
 
-    public Order (String name, String totalPrice, Date addTime, Integer status){
+    private Integer userId;
+
+    public Order(String name, String totalPrice, Date addTime, Integer status, Date finishTime, Integer userId) {
         this.name = name;
         this.totalPrice = totalPrice;
         this.addTime = addTime;
         this.status = status;
+        this.finishTime = finishTime;
+        this.userId = userId;
     }
 }

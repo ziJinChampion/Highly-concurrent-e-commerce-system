@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 @Data
-@Accessors
+@Accessors(chain = true)
 @ApiModel("search product dto")
 public class ProductSearchDTO {
 

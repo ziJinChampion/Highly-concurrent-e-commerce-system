@@ -1,30 +1,32 @@
 server:
   port: 9004
 
+
+
 spring:
   application:
     name: product-service
   cloud:
     nacos:
       discovery:
-        server-addr: 47.113.190.224:8848
+        server-addr: 175.24.176.171:8848
         cluster-name: FZ
         metadata:
           version: v1
     sentinel:
       transport:
-        dashboard: 47.113.190.224:8858
+        dashboard: 175.24.176.171:8858
         port: 8719
         client-ip:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://47.113.190.224/product_base?useSSL=false&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://175.24.176.171/user_base?useSSL=false&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&serverTimezone=Asia/Shanghai
     username: root
-    password: 123456
+    password: 807811602Wang
   redis:
-    host: 47.113.190.224
+    host: 175.24.176.171
     port: 6379
-    password: 123456
+    password:
     timeout: 1000
 
 management:

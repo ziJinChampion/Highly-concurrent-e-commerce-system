@@ -25,5 +25,7 @@ public class UserDO {
     private String remark;
     @TableField(value = "status")
     private Integer status;
+    @TableField(value = "`role`")
+    private Integer role;
 
 }

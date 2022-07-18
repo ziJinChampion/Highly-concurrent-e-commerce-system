@@ -14,9 +14,9 @@ public class CreditDO {
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    @TableField("userId")
+    @TableField("user_id")
     private Long userId;
 
     @TableField("point")
-    private String point;
+    private Double point;
 }

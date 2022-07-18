@@ -152,12 +152,6 @@
             <artifactId>shiro-spring</artifactId>
             <version>${spring.shiro.version}</version>
         </dependency>
-        <!-- Seata-->
-        <dependency>
-            <groupId></groupId>
-            <artifactId></artifactId>
-        </dependency>
-
 
     </dependencies>
 

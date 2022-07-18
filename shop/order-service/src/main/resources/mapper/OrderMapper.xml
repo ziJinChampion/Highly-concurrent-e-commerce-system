@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.finalwork.service.orderservice.dao.OrderMapper">
+
+    <update id="cancelOrder">
+        update `order` set `status` = -1 where `id` = #{id}
+    </update>
+    <select id="getOrderList" resultType="com.finalwork.service.common.bussiness.entityVO.order.OrderVO">
+        SELECT
+            o.id,
+            od.number,
+            o.`name`,
+            od.total_cost `totalCost`,
+            o.create_time `createTime`,
+            o.finish_time `finishTime`,
+            u1.`name` `userName`,
+            u2.`name` `sellerName`,
+            p.`name` `productName`,
+            p.photo
+        FROM
+            `order` o
+                LEFT JOIN order_detail od ON o.id = od.order_id
+                LEFT JOIN `user` u1 ON o.user_id = u1.id
+                LEFT JOIN `user` u2 ON od.seller_id = u2.id
+                LEFT JOIN product p ON od.product_id = p.id
+        WHERE o.user_id = #{userId}
+    </select>
+
+
+</mapper>

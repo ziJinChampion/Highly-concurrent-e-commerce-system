@@ -11,13 +11,13 @@ import org.apache.ibatis.annotations.Param;
 public interface StockMapper extends BaseMapper<StockDO> {
 
 
-    default StockDO getStockByProductId(@Param("id") Long id){
+    default StockDO getStockByProductId(@Param("id") Integer id){
         return selectOne(new QueryWrapper<StockDO>().eq("product_id",id));
     }
 
     Integer addStock(StockAddDTO dto);
 
-    Integer createStock();
+    Integer createStock(StockAddDTO dto);
 
 
 

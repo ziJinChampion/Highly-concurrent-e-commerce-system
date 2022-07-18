@@ -4,4 +4,19 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.finalwork.service.userservice.dao.UserMapper">
 
+
+    <select id="getLoginUserInfo" resultType="com.finalwork.service.common.bussiness.entityVO.user.UserInfoVO">
+        SELECT
+            u.id,
+            u.`name`,
+            u.mobile,
+            u.photo,
+            u.remark,
+            r.`name` `role`
+        FROM
+            `user` u
+                LEFT JOIN `role` r ON u.role = r.id
+        WHERE
+            u.id = #{id}
+    </select>
 </mapper>

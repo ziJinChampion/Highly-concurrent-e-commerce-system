@@ -17,38 +17,96 @@
         <result property="detail" column="detail"/>
     </resultMap>
 
+    <insert id="addStar">
+        insert into star_list (user_id,product_id,add_time) values (#{userId},#{productId},#{addTime})
+    </insert>
+
+    <update id="increaseStar">
+        update product set `star` = `star` + 1 where id = #{id}
+    </update>
+
     <select id="getList" parameterType="com.finalwork.service.common.bussiness.dto.product.ProductSearchDTO"
             resultMap="ProductMap">
-        select *
-        from product
+        select p.*
+        from product p
         where 1=1
-            <if test="id != null || id != 0">
-                and id = #{id}
+            <if test="name!= null and name !=''">
+                and name like CONCAT('%',#{name},'%')
             </if>
-            <if test="name != null || name !=''">
-                and name = #{name}
-            </if>
-            <if test="star !=null || star != 0 ">
-                and star > #{star}
-            </if>
-        <choose>
-            <when test="sort == 1">
-                ORDER BY star desc
-            </when>
-            <when test="sort == 2">
-                ORDER BY star asc
-            </when>
-            <when test="sort ==3 ">
-                ORDER BY price desc
-            </when>
-            <when test="sort ==4 ">
-                ORDER BY price asc
-            </when>
-        </choose>
+        LIMIT #{pageNum}, #{pageSize}
 
     </select>
     <select id="count" resultType="java.lang.Integer">
         select count(`id`) from product
+    </select>
+    <select id="getProductDetail"
+            resultType="com.finalwork.service.common.bussiness.entityVO.product.ProductDetailVO">
+        SELECT
+            p.id,
+            p.`name`,
+            p.photo,
+            p.price,
+            i.item_name `itemName`,
+            p.seller_name `sellerName`,
+            p.seller_id `sellerId`,
+            p.star,
+            p.detail,
+            s.number `stock`
+        FROM
+            product p
+                LEFT JOIN item i ON p.item_id = i.item_id
+                LEFT JOIN stock s ON s.product_id = p.id
+        WHERE
+            p.id = #{id}
+    </select>
+    <select id="getUserProductList"
+            resultMap="ProductMap">
+        select p.*
+        from product p
+        where seller_id = #{id}
+    </select>
+    <select id="getItem" resultType="com.finalwork.service.common.bussiness.entityVO.item.ItemVO">
+        SELECT
+            item_id `id`,
+            item_name `name`
+        FROM
+            `item`
+    </select>
+
+    <select id="getNewProductId" resultType="java.lang.Integer">
+        SELECT
+            id
+        FROM
+            `product`
+        WHERE
+                photo = #{photo}
+          AND `name` = #{name}
+          AND seller_id = #{sellerId}
+    </select>
+
+    <select id="getStar" resultType="java.lang.Integer">
+        select COUNT(1) from star_list WHERE user_id = #{userId} and product_id = #{productId}
+    </select>
+    <select id="getStarProductList"
+            resultType="com.finalwork.service.common.bussiness.entityVO.product.ProductDetailVO">
+        SELECT
+            p.id,
+            p.`name`,
+            p.photo,
+            p.price,
+            i.item_name `itemName`,
+            p.seller_name `sellerName`,
+            p.seller_id `sellerId`,
+            p.star,
+            p.detail,
+            s.number `stock`
+        FROM
+            product p
+                LEFT JOIN item i ON p.item_id = i.item_id
+                LEFT JOIN stock s ON s.product_id = p.id
+                LEFT JOIN star_list sl on p.id = sl.product_id
+        WHERE
+            sl.user_id = #{id}
     </select>
 
 </mapper>

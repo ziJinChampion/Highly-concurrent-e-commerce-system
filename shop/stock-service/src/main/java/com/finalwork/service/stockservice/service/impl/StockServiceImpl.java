@@ -22,8 +22,9 @@ public class StockServiceImpl implements StockService {
     @Autowired
     RedisTemplate redisTemplate;
 
+    @Override
     public CommonResult<String> deductStock(Long id, Integer num){
-        StockDO stockDO = stockMapper.getStockByProductId(id);
+        StockDO stockDO = stockMapper.getStockByProductId(id.intValue());
         if (stockDO == null) {
             return failed(GlobalErrorCode.PRODUCT_IS_NOT_EXIST.getCode(), GlobalErrorCode.PRODUCT_IS_NOT_EXIST.getMessage());
         }
@@ -38,14 +39,17 @@ public class StockServiceImpl implements StockService {
         }
     }
 
+    @Override
     public CommonResult<Integer> addStock(StockAddDTO dto) {
         StockDO stockDO = stockMapper.getStockByProductId(dto.getProductId());
         if (stockDO == null){
-            return failed(GlobalErrorCode.PRODUCT_IS_NOT_EXIST.getCode(),GlobalErrorCode.PRODUCT_IS_NOT_EXIST.getMessage());
+            stockMapper.createStock(dto);
+            return success(200);
         }
-        if (stockDO.getSellerId() != dto.getUserId()){
+        if (!stockDO.getSellerId().equals(dto.getUserId())){
             return failed(GlobalErrorCode.USER_NO_PERMISSIONS.getCode(), GlobalErrorCode.USER_NO_PERMISSIONS.getMessage());
         }
+        stockMapper.addStock(dto);
         return success(stockMapper.addStock(dto));
     }
 

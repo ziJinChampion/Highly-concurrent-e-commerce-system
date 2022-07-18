@@ -40,4 +40,8 @@ public class ProductVO {
     private String sellerId;
     @ApiModelProperty(value = "sellerName")
     private String sellerName;
+
+    private String detail;
+
+    private String remark;
 }

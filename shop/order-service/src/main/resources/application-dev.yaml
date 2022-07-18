@@ -1,0 +1,39 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: order-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 175.24.176.171:8848
+        cluster-name: FZ
+        metadata:
+          version: v1
+    sentinel:
+      transport:
+        dashboard: 175.24.176.171:8858
+        port: 8719
+        client-ip:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://175.24.176.171/user_base?useSSL=false&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: 807811602Wang
+  redis:
+    host: 175.24.176.171
+    port: 6379
+    password:
+    timeout: 1000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+
+

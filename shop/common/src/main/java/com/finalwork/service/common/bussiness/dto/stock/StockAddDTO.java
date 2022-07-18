@@ -14,11 +14,11 @@ import javax.validation.constraints.NotNull;
 public class StockAddDTO {
 
     @ApiModelProperty(value = "sellerId", required = false, example = "100")
-    private Long userId;
+    private Integer userId;
 
     @ApiModelProperty(value = "productId", required = true, example = "200")
     @NotNull(message = "productId can not be null")
-    private Long productId;
+    private Integer productId;
 
     @ApiModelProperty(value = "number", required = true, example = "300")
     @NotNull(message = "product add number can not be null")

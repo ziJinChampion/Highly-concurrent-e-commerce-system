@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.finalwork.service.creditservice.dao.CreditMapper">
+
+    <insert id="createCredit">
+        insert into `credit` (user_id,point) values (#{userId},#{point})
+    </insert>
+
+    <update id="addCredit">
+        UPDATE credit
+        SET point = point + #{point}
+        WHERE
+            user_id = #{userId}
+
+    </update>
+    <update id="payCredit">
+        UPDATE credit
+        SET point = point - #{point}
+        WHERE
+            user_id = #{userId}
+    </update>
+
+
+</mapper>

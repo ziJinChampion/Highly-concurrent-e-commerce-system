@@ -4,7 +4,6 @@ server:
 spring:
   application:
     name: stock-service
-
   cloud:
     nacos:
       discovery:
@@ -12,3 +11,5 @@ spring:
         cluster-name: FZ
         metadata:
           version: v1
+  profiles:
+    active: dev

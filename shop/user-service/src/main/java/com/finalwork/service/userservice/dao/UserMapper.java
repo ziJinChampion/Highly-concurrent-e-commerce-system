@@ -3,6 +3,7 @@ package com.finalwork.service.userservice.dao;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.finalwork.service.common.bussiness.entityDO.user.UserDO;
+import com.finalwork.service.common.bussiness.entityVO.user.UserInfoVO;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -12,5 +13,7 @@ public interface UserMapper extends BaseMapper<UserDO> {
         return selectOne(new QueryWrapper<UserDO>()
                 .eq("name",name));
     }
+
+    UserInfoVO getLoginUserInfo(Integer id);
 
 }
